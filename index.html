@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IP Facilitation Center</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+</head>
+<body>
+  <img class="image-gradient" src="assets/images/gradient.png" alt="gradient"/>
+  <div class="layer-blur"></div>
+
+  <div class="container">
+    <header>
+      <h1 class="logo">IP Facilitation</h1>
+      <nav>
+        <a href="dashboard.php">Dashboard</a>
+        <a href="convert.php">Convert</a>
+        <a href="assistant.html">Assistant</a>
+        <a href="admin.php">Admin</a>
+      </nav>
+      <a class="btn-signing" href="login.php">Login</a>
+    </header>
+
+    <main>
+      <div class="content">
+        <div class="tag-box">
+          <div class="tag">Secure Your Ideas &vert;</div>
+        </div>
+        <h1>Intellectual Property Simplified</h1>
+        <p class="description">
+          Streamline your patent/trademark filings with our AI-powered facilitation platform.
+        </p>
+        <div class="buttons">
+          <a href="convert.php" class="btn-get-started">Start Filing</a>
+          <a href="register.php" class="btn-signing-main">Sign Up</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- 3D Robot -->
+    <spline-viewer class="robot-3d" url="https://prod.spline.design/fRot09A-sPJViITa/scene.splinecode"></spline-viewer>
+
+    <!-- Chatbot -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">🤖 Need Help?</div>
+    <div id="chatbot-container">
+      <iframe src="assistant.html"></iframe>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
