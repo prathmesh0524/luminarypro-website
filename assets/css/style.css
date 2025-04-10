@@ -1,283 +1,227 @@
-/* Reset and basic styling */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  body {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: white;
-    overflow-x: hidden;
-    position: relative;
-  }
-  
-  /* Gradient image + blur layer */
-  .image-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-  }
-  
-  .layer-blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(20px);
-    background: rgba(0, 0, 0, 0.3);
-    z-index: -1;
-  }
-  
-  /* Main container */
-  .container {
-    position: relative;
-    min-height: 100vh;
-    padding: 40px 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 40px;
-  }
-  
-  .logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: #00ffe0;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #eee;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #00ffe0;
-  }
-  
-  .btn-signing {
-    background-color: #00ffe0;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-signing:hover {
-    background-color: #00bfa5;
-  }
-  
-  /* Main content */
-  main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  
-  .content {
-    max-width: 600px;
-  }
-  
-  .tag-box {
-    background-color: rgba(0, 255, 224, 0.1);
-    padding: 5px 15px;
-    display: inline-block;
-    border-radius: 30px;
-    margin-bottom: 20px;
-  }
-  
-  .tag {
-    color: #00ffe0;
-    font-weight: bold;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Gradient BG Image */
+.image-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.2;
+}
+
+.layer-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(30px);
+  z-index: -1;
+}
+
+/* Container */
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00ffe1;
+}
+
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00ffe1;
+}
+
+.btn-signing {
+  background-color: #00ffe1;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-signing:hover {
+  background-color: #00c2a8;
+}
+
+/* Main Content */
+main {
+  margin-top: 4rem;
+}
+
+.tag-box {
+  margin-bottom: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #00ffe1;
+  color: #000;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #00ffe1, #0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.buttons a {
+  margin-right: 1rem;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-get-started {
+  background: #00ffe1;
+  color: #000;
+}
+
+.btn-get-started:hover {
+  background: #00c2a8;
+}
+
+.btn-signing-main {
+  border: 1px solid #00ffe1;
+  color: #00ffe1;
+  background: transparent;
+}
+
+.btn-signing-main:hover {
+  background: rgba(0, 255, 225, 0.1);
+}
+
+/* Features Section */
+.features {
+  margin-top: 4rem;
+}
+
+.features ul li {
+  margin-bottom: 1rem;
+}
+
+/* Chatbot and Robot */
+#chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00ffe1;
+  color: #000;
+  padding: 12px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00ffe1;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+#chatbot-icon:hover {
+  background: #00c2a8;
+}
+
+#chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  display: none;
+  border: 2px solid #00ffe1;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#chatbot-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #0a0a0a;
+}
+
+/* 3D Robot */
+.robot-3d {
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+  width: 350px;
+  height: 400px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    font-size: 2rem;
   }
-  
-  .description {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #ccc;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .btn-get-started,
-  .btn-signing-main {
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-get-started {
-    background-color: #00ffe0;
-    color: #000;
-  }
-  
-  .btn-get-started:hover {
-    background-color: #00bfa5;
-  }
-  
-  .btn-signing-main {
-    background-color: transparent;
-    color: #00ffe0;
-    border: 2px solid #00ffe0;
-  }
-  
-  .btn-signing-main:hover {
-    background-color: #00ffe0;
-    color: #000;
-  }
-  
-  /* 3D Robot Spline */
+
   .robot-3d {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    width: 300px;
-    height: 300px;
-    z-index: 0;
-    pointer-events: none;
-  }
-  
-  /* Chatbot */
-  #chatbot-icon {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    background-color: #00ffe0;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 100;
-    box-shadow: 0 4px 10px rgba(0, 255, 224, 0.4);
-    transition: transform 0.3s ease;
-  }
-  
-  #chatbot-icon:hover {
-    transform: scale(1.1);
-  }
-  
-  #chatbot-container {
     display: none;
-    position: fixed;
-    bottom: 90px;
-    left: 30px;
-    width: 320px;
-    height: 450px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 255, 224, 0.3);
-    z-index: 101;
   }
-  
-  #chatbot-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+
+  nav a {
+    margin-right: 0.5rem;
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 32px;
-    }
-  
-    .description {
-      font-size: 16px;
-    }
-  
-    .btn-get-started,
-    .btn-signing-main {
-      padding: 10px 18px;
-      font-size: 14px;
-    }
-  
-    .robot-3d {
-      width: 180px;
-      height: 180px;
-    }
-  
-    #chatbot-container {
-      width: 280px;
-      height: 400px;
-    }
-  }
-  .form-container {
-    max-width: 400px;
-    margin: 5rem auto;
-    background: #111;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  }
-  
-  .form-container h2 {
-    text-align: center;
+
+  .buttons a {
+    display: block;
     margin-bottom: 1rem;
   }
-  
-  .form-container input[type="email"],
-  .form-container input[type="password"] {
-    width: 100%;
-    padding: 0.7rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    border: none;
-    background: #222;
-    color: white;
-  }
-  
-  .form-container button {
-    width: 100%;
-    padding: 0.7rem;
-    border: none;
-    background-color: #5300a0;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .form-container button:hover {
-    background-color: #6600c5;
-  }
-  
-  .form-container .error {
-    background-color: #ff4d4d;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
+}
