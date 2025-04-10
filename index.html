@@ -12,6 +12,7 @@
   <div class="layer-blur"></div>
 
   <div class="container">
+    <!-- Header -->
     <header>
       <h1 class="logo">IP Facilitation</h1>
       <nav>
@@ -23,8 +24,9 @@
       <a class="btn-signing" href="login.php">Login</a>
     </header>
 
+    <!-- Main Content -->
     <main>
-      <div class="content">
+      <div class="content" data-aos="fade-right">
         <div class="tag-box">
           <div class="tag">Secure Your Ideas &vert;</div>
         </div>
@@ -39,6 +41,17 @@
       </div>
     </main>
 
+    <!-- Optional Section: Add Your Sub-page Highlights -->
+    <section class="features" data-aos="fade-up">
+      <div class="tag-box"><div class="tag">Explore More</div></div>
+      <ul style="margin-top: 2rem; list-style: none; padding-left: 0;">
+        <li><a href="convert.php" class="btn-get-started">📑 Convert Patent Files</a></li>
+        <li><a href="assistant.html" class="btn-signing-main">🤖 Open AI Assistant</a></li>
+        <li><a href="admin.php" class="btn-signing-main">🛠️ Admin Panel</a></li>
+        <li><a href="dashboard.php" class="btn-signing-main">📊 User Dashboard</a></li>
+      </ul>
+    </section>
+
     <!-- 3D Robot -->
     <spline-viewer class="robot-3d" url="https://prod.spline.design/fRot09A-sPJViITa/scene.splinecode"></spline-viewer>
 
@@ -51,6 +64,12 @@
 
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="assets/js/script.js"></script>
+  <script>
+    AOS.init();
+    function toggleChatbot() {
+      const chatbot = document.getElementById("chatbot-container");
+      chatbot.style.display = chatbot.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
