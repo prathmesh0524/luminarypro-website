@@ -1,8 +1,9 @@
-// Initialize AOS animation library
-AOS.init();
+document.addEventListener("DOMContentLoaded", () => {
+  const chatbotBtn = document.getElementById("chatbot-icon");
+  const chatbotContainer = document.getElementById("chatbot-container");
 
-// Toggle chatbot visibility
-function toggleChatbot() {
-  const chatbot = document.getElementById("chatbot-container");
-  chatbot.style.display = chatbot.style.display === "block" ? "none" : "block";
-}
+  chatbotBtn.addEventListener("click", () => {
+    chatbotContainer.style.display =
+      chatbotContainer.style.display === "block" ? "none" : "block";
+  });
+});
